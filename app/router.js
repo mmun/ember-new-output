@@ -7,6 +7,8 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('model-hook-error');
+  this.route('rendering-error');
 });
 
 export default Router;
