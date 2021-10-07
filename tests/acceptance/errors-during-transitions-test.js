@@ -33,6 +33,22 @@ test('visiting /rendering-error', function(assert) {
   });
 });
 
+test('redirect to /model-hook-error', function(assert) {
+  visit('/redirect-to?routeName=model-hook-error');
+
+  andThen(function() {
+    assert.equal(currentURL(), '/model-hook-error');
+  });
+});
+
+test('redirect to /rendering-error', function(assert) {
+  visit('/redirect-to?routeName=rendering-error');
+
+  andThen(function() {
+    assert.equal(currentURL(), '/rendering-error');
+  });
+});
+
 test('visiting /', function(assert) {
   visit('/');
 
